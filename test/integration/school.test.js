@@ -17,8 +17,6 @@ describe('School Routes', () => {
       .set({ Authorization: process.env.USER_TOKEN })
       .send(schObj)
       .end((err, res) => {
-        // eslint-disable-next-line no-console
-        console.log(err, res.body);
         process.env.SCHOOL_ID = res.body.data.id;
         expect(res.body.status).to.equal(SUCCESS);
         expect(res.body.message).to.equal('School added successfully');

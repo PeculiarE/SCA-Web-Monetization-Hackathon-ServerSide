@@ -30,7 +30,8 @@ export default {
             address,
             facilities,
             banner,
-            school_fees_range
+            school_fees_range,
+            email
         FROM
             school
         ORDER BY
